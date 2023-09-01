@@ -8,8 +8,8 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      rollupTypes: true
-    })
+      rollupTypes: true,
+    }),
   ],
   build: {
     sourcemap: false,
@@ -17,16 +17,16 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'foo',
       formats: ['es', 'cjs', 'umd'],
-      fileName: format => `${format}/index.js`
+      fileName: (format) => `${format}/index.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react-dom/client'],
       output: {
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM'
-        }
-      }
-    }
-  }
+          'react-dom': 'ReactDOM',
+        },
+      },
+    },
+  },
 })

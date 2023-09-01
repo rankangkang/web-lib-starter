@@ -37,7 +37,7 @@ export const setLoading = (flag: boolean) => {
   }))
 }
 
-// 
+//
 ```
 
 app.ts
